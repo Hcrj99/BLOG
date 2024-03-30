@@ -1,0 +1,34 @@
+.Form__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+input[type='text'] {
+    display: block;
+    padding: 5px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid var(-secondary-color);
+    color: var(--paragraph-color);
+}
+
+input[type='submit'] {
+    width: 100px;
+    height: 25px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    background: var(--button-color);
+    color: var(--background-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background: var(--secondary-color);
+    color: var(--main-color);
+}

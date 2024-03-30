@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Search } from '../../Pages/Search/Search';
 import './Nav.css';
 
 export const Nav = () => {
@@ -11,6 +12,7 @@ export const Nav = () => {
                 <l1><NavLink to="/Create Article">Create Article</NavLink></l1>
                 <l1><NavLink to="/Contact">Contact</NavLink></l1>
             </ul>
+            <Search />
         </nav>
     )
 }
