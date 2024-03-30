@@ -5,6 +5,8 @@ import { Articles } from "../Components/Pages/Articles";
 import { Header } from "../Components/Layout/Header/Header";
 import { Nav } from "../Components/Layout/Nav/Nav";
 import { Footer } from "../Components/Layout/Footer/Footer";
+import { CreateArticles } from "../Components/Pages/CreateArticles";
+import { Contact } from "../Components/Pages/Contact";
 
 export const Router = () => {
     return (
@@ -19,6 +21,8 @@ export const Router = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/Home" element={<Home />} />
                     <Route path="/Articles" element={<Articles />} />
+                    <Route path="/Create Article" element={<CreateArticles />} />
+                    <Route path="/Contact" element={<Contact />} />
                 </Routes>
             </section>
 
