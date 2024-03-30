@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import { Home } from "../Components/Pages/Home";
+import { Home } from "../Components/Pages/Home/Home";
 import { Articles } from "../Components/Pages/Articles";
 import { Header } from "../Components/Layout/Header/Header";
 import { Nav } from "../Components/Layout/Nav/Nav";
