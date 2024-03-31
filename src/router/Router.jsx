@@ -5,7 +5,7 @@ import { Articles } from "../Components/Pages/Articles/Articles";
 import { Header } from "../Components/Layout/Header/Header";
 import { Nav } from "../Components/Layout/Nav/Nav";
 import { Footer } from "../Components/Layout/Footer/Footer";
-import { CreateArticles } from "../Components/Pages/CreateArticles";
+import { CreateArticles } from "../Components/Pages/Create/CreateArticles";
 import { Contact } from "../Components/Pages/Contact";
 
 export const Router = () => {
