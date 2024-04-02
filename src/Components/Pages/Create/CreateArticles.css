@@ -1,0 +1,49 @@
+.Create__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Create__container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+}
+
+.Create__container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.Form__container-create {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 1px solid var(--button-color);
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #ffff;
+}
+
+.Form__container-create input[type='file'],
+.Form__container-create input[type='text'], 
+.Form__container-create textarea {
+    display: block;
+    padding: 10px;
+    margin: 20px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    background: var(--background-color);
+}
+
+
+
