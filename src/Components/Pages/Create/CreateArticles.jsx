@@ -1,25 +1,39 @@
 import React, { useState } from 'react';
 import './CreateArticles.css';
 import { useForm } from '../../../Hooks/useForm';
+import { Ajax } from '../../../Helpers/Ajax';
+import { Global } from '../../../Helpers/Global';
 
 
 export const CreateArticles = () => {
 
     const { formulary, sent, changed } = useForm({});
+    const [result, setResult] = useState("no sent");
 
     //Get data Form
-    const saveArticle = (event) => {
+    const saveArticle = async (event) => {
         event.preventDefault();
-        let newArticle = JSON.stringify(formulary);
-        console.log(newArticle);
+        let newArticle = formulary;
+
+        //save Article in backend
+        const { data, charge } = await Ajax(Global.url + 'create', 'POST', newArticle);
+
+        if (data.status == "success") {
+            setResult("sent");
+        }
+        else{
+            setResult("error");
+        }
+
     };
 
-    //save Article in backend
 
     return (
         <div className='Create__container'>
             <h2>Create Article</h2>
             <p>Form through which you can create your own articles by adding image, title and the content that the article will cover.</p>
+            <strong>{result === "sent" ? "Article save" : ""}</strong>
+            <strong>{result === "error" ? "The data provided is too short." : ""}</strong>
             <form className='Form__container-create' onSubmit={saveArticle}>
                 <section>
                     <label htmlFor='file'>Image</label>

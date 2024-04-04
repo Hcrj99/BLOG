@@ -1,18 +1,20 @@
 export const Ajax = async(url, method, dataSave = " ") => {
     let charge = true;
 
+    console.log(method);
+
     let options = {
         method: 'GET'
     };
 
     if (method === "GET" || method === "DELETE") {
-        let options = {
+        options = {
             method: 'GET'
         };
     }
 
     if (method === "POST" || method === "PUT") {
-        let options = {
+        options = {
             method: method,
             body: JSON.stringify(dataSave),
             headers: {
