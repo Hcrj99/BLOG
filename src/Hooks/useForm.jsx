@@ -1,43 +1,43 @@
-const { useState } = require("react");
+import { useState } from "react";
 
-export const UseForm = ( objetoInicial = {}) => {
+export const useForm = ( objetoInicial = {}) => {
 
-    const [formulario, setFormulario] = useState(objetoInicial);
+    const [formulary, setForm] = useState(objetoInicial);
 
 
-    const seriaLizarFormulario = (formulario) => {
-        const fromData = new FormData(formulario);
+    const serializeForm = (formulary) => {
+        const fromData = new FormData(formulary);
 
-        const objetoCompleto = {};  
+        const completeObject = {};  
 
         for (let [name, value] of fromData) {
-            objetoCompleto[name] = value;
+            completeObject[name] = value;
         };
 
-        return objetoCompleto;
+        return completeObject;
     };
 
 
-    const enviado = (e) => {
+    const sent = (e) => {
         e.preventDefault();
 
-        let curso =seriaLizarFormulario(e.target);
+        let data =serializeForm(e.target);
 
-        setFormulario(curso);
+        setForm(data);
     };
 
-    const cambiado = ({ target }) => {
+    const changed = ({ target }) => {
         const { name, value } = target;
 
-        setFormulario({
-            ...formulario,
+        setForm({
+            ...formulary,
             [name]:value
         });
     }
 
     return {
-        formulario,
-        enviado,
-        cambiado,
+        formulary,
+        sent,
+        changed,
     }
 }
