@@ -1,7 +1,7 @@
 import React from 'react';
 import { Global } from '../../../Helpers/Global';
 import { Ajax } from '../../../Helpers/Ajax';
-
+import { Link } from 'react-router-dom';
 
 export const ArticlesList = ({ articles, setArticles }) => {
 
@@ -23,7 +23,7 @@ export const ArticlesList = ({ articles, setArticles }) => {
                         {article.image !== 'default.png' && <img src= {Global.url + 'article-image/' + article.image} />}
                     </figure>
                     <div className='Article__content'>
-                        <h2>{article.title}</h2>
+                        <h2><Link to={"/Article/" + article._id}>{article.title}</Link></h2>
                         <p>{article.content}</p>
                         <div className='up__buttons'>
                             <button>Edit</button>

@@ -8,6 +8,7 @@ import { Footer } from "../Components/Layout/Footer/Footer";
 import { CreateArticles } from "../Components/Pages/Create/CreateArticles";
 import { Contact } from "../Components/Pages/Contact";
 import { SearchArticle } from "../Components/Pages/Search/SearchArticle";
+import { Article } from "../Components/Pages/Articles/Article";
 
 export const Router = () => {
     return (
@@ -25,6 +26,7 @@ export const Router = () => {
                     <Route path="/Create Article" element={<CreateArticles />} />
                     <Route path="/Contact" element={<Contact />} />
                     <Route path="/Search/:search" element={<SearchArticle />} />
+                    <Route path="/Article/:id" element={<Article />} />
                     <Route path="*" element={
                     <div className="Error__container">
                         <h1>Error 404</h1>

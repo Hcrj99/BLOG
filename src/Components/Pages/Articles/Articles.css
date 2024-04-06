@@ -38,9 +38,11 @@
     gap: 30px;
 }
 
-.Article__content h2 {
+.Article__content h2, a {
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
+    color: var(--main-color);
 } 
 
 .up__buttons {
@@ -68,5 +70,17 @@
     background-color: var(--secondary-color);
 }
 
+.Article__container-only {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid var(--button-color);
+    border-radius: 10px;
+}
 
 
