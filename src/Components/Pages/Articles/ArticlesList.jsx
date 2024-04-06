@@ -1,8 +1,19 @@
 import React from 'react';
 import { Global } from '../../../Helpers/Global';
+import { Ajax } from '../../../Helpers/Ajax';
 
 
 export const ArticlesList = ({ articles, setArticles }) => {
+
+    const deleteArticle = async(id) =>{
+        let {data} = await Ajax(Global.url +  'article/' + id , 'DELETE');
+
+        if(data.status === 'success'){
+            let upgradeArticles = articles.filter(article => article._id !== id);
+            setArticles(upgradeArticles);
+        }
+    }
+
     return (
         articles.map(article => {
             return (
@@ -16,7 +27,7 @@ export const ArticlesList = ({ articles, setArticles }) => {
                         <p>{article.content}</p>
                         <div className='up__buttons'>
                             <button>Edit</button>
-                            <button>Delete</button>
+                            <button onClick={() => {deleteArticle(article._id)}}>Delete</button>
                         </div>
                     </div>
                 </article>
