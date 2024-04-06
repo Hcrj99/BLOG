@@ -1,7 +1,5 @@
-export const Ajax = async(url, method, dataSave = " ") => {
+export const Ajax = async (url, method, dataSave = " ", archive = false) => {
     let charge = true;
-
-    console.log(method);
 
     let options = {
         method: 'GET'
@@ -14,13 +12,18 @@ export const Ajax = async(url, method, dataSave = " ") => {
     }
 
     if (method === "POST" || method === "PUT") {
-        options = {
+        archive ? (
+            options = {
+                method: method,
+                body: dataSave,
+            }
+        ) : (options = {
             method: method,
             body: JSON.stringify(dataSave),
             headers: {
                 "Content-type": "application/json"
             }
-        };
+        });
     }
 
     const request = await fetch(url, options);

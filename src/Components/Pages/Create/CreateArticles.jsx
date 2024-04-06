@@ -16,12 +16,17 @@ export const CreateArticles = () => {
         let newArticle = formulary;
 
         //save Article in backend
-        const { data, charge } = await Ajax(Global.url + 'create', 'POST', newArticle);
+        const { data } = await Ajax(Global.url + 'create', 'POST', newArticle);
 
         if (data.status == "success") {
             setResult("sent");
+            //up image
+            const fileInput = document.querySelector('#file');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            const dataImage = await Ajax(Global.url + 'up-image/' + data.article._id, 'POST', formData, true);
         }
-        else{
+        else {
             setResult("error");
         }
 
@@ -37,7 +42,7 @@ export const CreateArticles = () => {
             <form className='Form__container-create' onSubmit={saveArticle}>
                 <section>
                     <label htmlFor='file'>Image</label>
-                    <input type='file' name='file' />
+                    <input type='file' name='file' id='file' />
                 </section>
                 <section>
                     <label htmlFor='title'>Title</label>

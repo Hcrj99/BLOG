@@ -24,6 +24,11 @@
     border: 2px solid var(--button-color);
 }
 
+.Article__image img{
+    width: 100%;
+    height: 100%;
+}
+
 .Article__content {
     flex: 2 1;
     display: flex;
