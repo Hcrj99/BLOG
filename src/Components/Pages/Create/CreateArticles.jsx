@@ -18,18 +18,18 @@ export const CreateArticles = () => {
         //save Article in backend
         const { data } = await Ajax(Global.url + 'create', 'POST', newArticle);
 
-        if (data.status == "success") {
-            setResult("sent");
+        data.status === "success" ? setResult("sent") : setResult("error");
+
+
+        const fileInput = document.querySelector('#file');
+
+        if (data.status === "success" && fileInput.files[0]) {
             //up image
-            const fileInput = document.querySelector('#file');
             const formData = new FormData();
             formData.append('file', fileInput.files[0]);
             const dataImage = await Ajax(Global.url + 'up-image/' + data.article._id, 'POST', formData, true);
+            dataImage.data.status === "success" ? setResult("sent") : setResult("error");
         }
-        else {
-            setResult("error");
-        }
-
     };
 
 
