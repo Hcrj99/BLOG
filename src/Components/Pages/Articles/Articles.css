@@ -53,9 +53,16 @@
     gap: 10px;
 }
 
-.up__buttons button {
+.up__buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.up__buttons button, .up__buttons a{
     width: 100px;
     height: 50px;
+    font-size: 1rem;
     font-weight: bold;
     background-color: var(--button-color);
     border-radius: 5px;
@@ -65,7 +72,7 @@
     transition: 0.3s;
 }
 
-.up__buttons button:hover {
+.up__buttons button:hover, .up__buttons a:hover {
     color: var(--main-color);
     background-color: var(--secondary-color);
 }

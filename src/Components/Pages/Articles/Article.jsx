@@ -18,8 +18,6 @@ export const Article = () => {
         //fetch
         const { data, charge } = await Ajax(Global.url + 'article/' + params.id, "GET");
 
-        console.log(data);
-
         if (data.status === "success") {
             setArticle(data.article);
         }

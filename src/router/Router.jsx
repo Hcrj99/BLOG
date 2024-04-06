@@ -6,9 +6,10 @@ import { Header } from "../Components/Layout/Header/Header";
 import { Nav } from "../Components/Layout/Nav/Nav";
 import { Footer } from "../Components/Layout/Footer/Footer";
 import { CreateArticles } from "../Components/Pages/Create/CreateArticles";
-import { Contact } from "../Components/Pages/Contact";
+import { Contact } from "../Components/Pages/Contact/Contact";
 import { SearchArticle } from "../Components/Pages/Search/SearchArticle";
 import { Article } from "../Components/Pages/Articles/Article";
+import { EditArticles } from '../Components/Pages/Edit/EditArticles';
 
 export const Router = () => {
     return (
@@ -27,6 +28,7 @@ export const Router = () => {
                     <Route path="/Contact" element={<Contact />} />
                     <Route path="/Search/:search" element={<SearchArticle />} />
                     <Route path="/Article/:id" element={<Article />} />
+                    <Route path="/Edit/:id" element={<EditArticles />} />
                     <Route path="*" element={
                     <div className="Error__container">
                         <h1>Error 404</h1>
