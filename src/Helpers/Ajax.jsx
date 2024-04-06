@@ -7,7 +7,7 @@ export const Ajax = async (url, method, dataSave = " ", archive = false) => {
 
     if (method === "GET" || method === "DELETE") {
         options = {
-            method: 'GET'
+            method: method
         };
     }
 
