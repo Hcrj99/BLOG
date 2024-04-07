@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .Contact__container h2 {
@@ -36,6 +37,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    border: 2px solid var(--button-color);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 
@@ -48,4 +52,23 @@
 .Contact__container textarea {
     width: 300px;
     height: 150px;
+}
+
+.Contact__container input[type='submit'] {
+    width: 100px;
+    height: 25px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    background: var(--button-color);
+    color: var(--background-color);
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.Contact__container input[type='submit']:hover {
+    background: var(--secondary-color);
+    color: var(--main-color);
 }
