@@ -29,6 +29,7 @@ export const SearchArticle = () => {
             setArticles([]);
         }
         setCharging(false);
+        console.log(data);
     };
 
     return (

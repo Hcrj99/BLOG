@@ -11,6 +11,7 @@ import { SearchArticle } from "../Components/Pages/Search/SearchArticle";
 import { Article } from "../Components/Pages/Articles/Article";
 import { EditArticles } from '../Components/Pages/Edit/EditArticles';
 import { ErrorArticles } from "../Helpers/ErrorArticles/ErrorArticles";
+import { EmptyArticles } from "../Helpers/EmptyArticles/EmptyArticles";
 
 export const Router = () => {
     return (
@@ -30,6 +31,7 @@ export const Router = () => {
                     <Route path="/Search/:search" element={<SearchArticle />} />
                     <Route path="/Article/:id" element={<Article />} />
                     <Route path="/Edit/:id" element={<EditArticles />} />
+                    <Route path="/Search/" element={<EmptyArticles />} />
                     <Route path="*" element={<ErrorArticles />}></Route>
                 </Routes>
             </section>
