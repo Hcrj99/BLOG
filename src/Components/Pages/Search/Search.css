@@ -5,17 +5,17 @@
     gap: 20px;
 }
 
-input[type='text'] {
+.Form__container input[type='text'] {
     display: block;
     padding: 5px;
-    width: 300px;
+    max-width: 300px;
     font-weight: bold;
     font-size: 0.9rem;
     border: 1px solid var(-secondary-color);
     color: var(--paragraph-color);
 }
 
-input[type='submit'] {
+.Form__container input[type='submit'] {
     width: 100px;
     height: 25px;
     font-size: 0.8rem;
@@ -28,7 +28,15 @@ input[type='submit'] {
     cursor: pointer;
 }
 
-input[type='submit']:hover {
+.Form__container input[type='submit']:hover {
     background: var(--secondary-color);
     color: var(--main-color);
+}
+
+@media (max-width: 450px) {
+    .Form__container input[type='text'] {
+        display: block;
+        padding: 5px;
+        max-width: 150px;
+    }
 }

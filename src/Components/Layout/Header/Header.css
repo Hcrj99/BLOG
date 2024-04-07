@@ -16,3 +16,21 @@
     font-weight: bold;
     color: var(--button-color);
 }
+
+@media (max-width: 768px) {
+    .Header__container h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .Header__container h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .Header__container h1 {
+        font-size: 1rem;
+    }
+}

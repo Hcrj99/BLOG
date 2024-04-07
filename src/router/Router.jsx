@@ -31,7 +31,7 @@ export const Router = () => {
                     <Route path="/Search/:search" element={<SearchArticle />} />
                     <Route path="/Article/:id" element={<Article />} />
                     <Route path="/Edit/:id" element={<EditArticles />} />
-                    <Route path="/Search/" element={<EmptyArticles />} />
+                    <Route path="/Search/" element={<Articles />} />
                     <Route path="*" element={<ErrorArticles />}></Route>
                 </Routes>
             </section>

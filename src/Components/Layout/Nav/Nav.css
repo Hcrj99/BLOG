@@ -29,3 +29,28 @@
 .Nav__container a:hover {
     color: var(--background-color);
 }
+
+@media (max-width: 1024px) {
+    .Nav__container a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 884px) {
+    .Nav__container a {
+        margin: 0 8px 0 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .Nav__container {
+        width: 100%;
+        height: 65px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
