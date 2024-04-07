@@ -4,6 +4,7 @@ import { Global } from '../../../Helpers/Global';
 import { Ajax } from '../../../Helpers/Ajax';
 import { ArticlesList } from '../Articles/ArticlesList';
 import { useParams } from 'react-router-dom';
+import { EmptyArticles } from '../../../Helpers/EmptyArticles/EmptyArticles'
 
 
 export const SearchArticle = () => {
@@ -33,7 +34,7 @@ export const SearchArticle = () => {
     return (
         <div className='Articles__container'>
             {charging === true ? "charging" : (
-                articles.length >= 1 ? <ArticlesList articles={articles} setArticles={setArticles}/> : (<h3>Empty articles</h3>)
+                articles.length >= 1 ? <ArticlesList articles={articles} setArticles={setArticles}/> : (<EmptyArticles />)
             )}
         </div>
     );

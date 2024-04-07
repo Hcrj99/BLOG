@@ -4,6 +4,7 @@ import { Global } from '../../../Helpers/Global';
 import { Ajax } from '../../../Helpers/Ajax';
 import { ArticlesList } from './ArticlesList';
 import { ChargingArticles } from '../../../Helpers/ChargingArticles/ChargingArticles';
+import { EmptyArticles } from '../../../Helpers/EmptyArticles/EmptyArticles';
 
 export const Articles = () => {
 
@@ -29,7 +30,7 @@ export const Articles = () => {
     return (
         <div className='Articles__container'>
             {charging === true ? <ChargingArticles /> : (
-                articles.length >= 1 ? <ArticlesList articles={articles} setArticles={setArticles}/> : (<h3>Empty articles</h3>)
+                articles.length >= 1 ? <ArticlesList articles={articles} setArticles={setArticles}/> : (<EmptyArticles />)
             )}
         </div>
     );

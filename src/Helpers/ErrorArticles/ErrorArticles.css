@@ -1,0 +1,13 @@
+.Error__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+
+.Error__container h2{
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}

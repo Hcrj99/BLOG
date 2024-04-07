@@ -10,6 +10,7 @@ import { Contact } from "../Components/Pages/Contact/Contact";
 import { SearchArticle } from "../Components/Pages/Search/SearchArticle";
 import { Article } from "../Components/Pages/Articles/Article";
 import { EditArticles } from '../Components/Pages/Edit/EditArticles';
+import { ErrorArticles } from "../Helpers/ErrorArticles/ErrorArticles";
 
 export const Router = () => {
     return (
@@ -29,10 +30,7 @@ export const Router = () => {
                     <Route path="/Search/:search" element={<SearchArticle />} />
                     <Route path="/Article/:id" element={<Article />} />
                     <Route path="/Edit/:id" element={<EditArticles />} />
-                    <Route path="*" element={
-                    <div className="Error__container">
-                        <h1>Error 404</h1>
-                    </div>}></Route>
+                    <Route path="*" element={<ErrorArticles />}></Route>
                 </Routes>
             </section>
 
