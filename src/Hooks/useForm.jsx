@@ -12,7 +12,7 @@ export const useForm = ( objetoInicial = {}) => {
 
         for (let [name, value] of fromData) {
             completeObject[name] = value;
-        };
+        }
 
         return completeObject;
     };
